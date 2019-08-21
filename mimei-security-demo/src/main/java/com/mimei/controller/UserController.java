@@ -2,6 +2,7 @@ package com.mimei.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.mimei.domain.User;
+import com.mimei.exception.UserNotExistException;
 import com.mimei.view.UserDetailView;
 import com.mimei.view.UserSimpleView;
 import com.sun.org.apache.regexp.internal.RE;
@@ -36,9 +37,10 @@ public class UserController {
     @GetMapping(value = "/{id:\\d+}")
     @JsonView(UserDetailView.class)
     public User getInfo(@PathVariable Long id) {
-        User user = new User();
+        /*User user = new User();
         user.setUsername("tom");
-        return user;
+        return user; */
+        throw new UserNotExistException(1L);
     }
 
     @PostMapping
