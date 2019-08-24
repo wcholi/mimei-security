@@ -6,7 +6,7 @@ import javax.validation.ConstraintValidatorContext;
 /**
  * @author wuchongliang
  * @create 2019-08-21 14:05:22
- * @description:
+ * @description:   用于处理校验注解的类
  */
 public class MyConstraintValidator implements ConstraintValidator<MyConstraint, Object> {
 

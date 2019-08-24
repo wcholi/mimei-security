@@ -37,10 +37,10 @@ public class UserController {
     @GetMapping(value = "/{id:\\d+}")
     @JsonView(UserDetailView.class)
     public User getInfo(@PathVariable Long id) {
-        /*User user = new User();
+        User user = new User();
         user.setUsername("tom");
-        return user; */
-        throw new UserNotExistException(1L);
+        return user;
+        //throw new RuntimeException();
     }
 
     @PostMapping
